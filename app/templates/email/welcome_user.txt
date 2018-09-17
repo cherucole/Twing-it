@@ -1,0 +1,10 @@
+Hello {{user.username}}
+Welcome to The Blog Post by Melissa Malala
+I've noted that you just signed up!
+
+Welcome to our application and
+I want to welcome you to my family.
+Please enjoy the blogposts and feel free to submit one of your own.
+You can also comment on a blogpost and leave feedback!
+
+Thanks!
