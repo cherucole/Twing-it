@@ -20,9 +20,6 @@ class User(UserMixin,db.Model):
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
     password_hash = db.Column(db.String(255))
-    blogpost = db.relationship('Blogpost', backref='user', lazy="dynamic")
-    comments = db.relationship("Comment", backref="user", lazy="dynamic")
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
     is_admin = db.Column(db.Boolean, default=False)
 
     @property
