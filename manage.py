@@ -1,55 +1,30 @@
-import os
+from app import create_app,db
+from flask_script import Manager,Server
+from app.models import User
+from flask_migrate import Migrate, MigrateCommand
 
-class Config:
-    '''
-    General configuration parent class
-    '''
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI= 'postgresql+psycopg2://melissamalala:abc123@localhost/twing'
+# Creating app instance
+app = create_app('development')
 
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    UPLOADED_PHOTOS_DEST = 'app/static/photos'
+manager = Manager(app)
+migrate = Migrate(app,db)
 
-    #  email configurations
-    MAIL_SERVER = 'smtp.googlemail.com'
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+manager.add_command('server',Server)
+manager.add_command('db',MigrateCommand)
 
-    # simple mde  configurations
-    SIMPLEMDE_JS_IIFE = True
-    SIMPLEMDE_USE_CDN = True
+@manager.command
+def test():
+    """Run the unit tests."""
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
 
-
-class ProdConfig(Config):
-    '''
-    Production  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+@manager.shell
+def make_shell_context():
+    return dict(app = app,
+                db = db,
+                User = User)
 
 
-class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL_TEST")
-
-
-class DevConfig(Config):
-    '''
-    Development  configuration child class
-
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
-
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    DEBUG = True
-
-
-config_options = {
-    'development': DevConfig,
-    'production': ProdConfig,
-    'test': TestConfig
-}
+if __name__ == '__main__':
+    manager.run()
