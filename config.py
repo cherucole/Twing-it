@@ -1,30 +1,57 @@
-from app import create_app,db
-from flask_script import Manager,Server
-from app.models import User
-from flask_migrate import Migrate, MigrateCommand
+import os
 
-# Creating app instance
-app = create_app('development')
+class Config:
+    '''
+    General configuration parent class
+    '''
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://melissamalala:abc123@localhost/twing'
 
-manager = Manager(app)
-migrate = Migrate(app,db)
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
-manager.add_command('server',Server)
-manager.add_command('db',MigrateCommand)
+    #  email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
-@manager.command
-def test():
-    """Run the unit tests."""
-    import unittest
-    tests = unittest.TestLoader().discover('tests')
-    unittest.TextTestRunner(verbosity=2).run(tests)
-
-@manager.shell
-def make_shell_context():
-    return dict(app = app,
-                db = db,
-                User = User)
+    # simple mde  configurations
+    SIMPLEMDE_JS_IIFE = True
+    SIMPLEMDE_USE_CDN = True
 
 
-if __name__ == '__main__':
-    manager.run()
+class ProdConfig(Config):
+    '''
+    Production  configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://melissamalala:abc123@localhost/twing'
+
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://melissamalala:abc123@localhost/twing_test'
+
+
+class DevConfig(Config):
+    '''
+    Development  configuration child class
+
+    Args:
+        Config: The parent configuration class with General configuration settings
+    '''
+
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://melissamalala:abc123@localhost/twing'
+    DEBUG = True
+
+
+config_options = {
+    'development': DevConfig,
+    'production': ProdConfig,
+    'test': TestConfig
+}
+
+
+
