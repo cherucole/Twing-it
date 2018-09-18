@@ -72,8 +72,6 @@ def check_admin():
         abort(403)
 
 
-
-
 @main.route('/dashboard')
 @login_required
 def dashboard():
@@ -90,4 +88,3 @@ def admin_dashboard():
         abort(403)
 
     return render_template('admin_dashboard.html', title="Dashboard")
-

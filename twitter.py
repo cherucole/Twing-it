@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import tweepy #The Twitter API
 from time import sleep
 from datetime import datetime
@@ -5,7 +6,13 @@ from textblob import TextBlob #For Sentiment Analysis
 import matplotlib.pyplot as plt #For Graphing the Data
 import psycopg2
 import json
+import sys
 
+consumer_key = 'WRxcgZHq8HOA9AiACeoz7pc61'
+consumer_secret = 'IJnOARqL3baljF5VfMPB4Gy1GmxVLlSv6L4BgJoh3bVDslSQYL'
+
+access_token = '32554005-yIgL0lbl0aWXyJ0E8q61zDF8BpOtVzWwRoZyCDm1n'
+access_token_secret = 'PzknR8jcAmNgG35G0D99BH9qEJfF7n477AxK1kgFDnVWl'
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -52,29 +59,37 @@ print(user.name)
 
 
 # The search term you want to find
-query = "#ISupportUhuruCuts"
+query = "corruption"
 # Language code (follows ISO 639-1 standards)
 language = "en"
-rpp=10
+rpp=100000
 
-geocode = "0.0236,37.9062,1000km"
+geocode = "40.7128,74.0060,5000km"
 
 # Calling the user_timeline function with our parameters
 results = api.search(q=query, lang=language, geocode=geocode, rpp=rpp)
 
-
-# # secondly-retrieve_tweets_from_respective_keyword(s)
-# public_tweets = api.search('Ethiopia')
+results_array = []
+non_bmp_map= dict.fromkeys(range(0x10000, sys.maxunicode +1), 0xfffd)
 
 for tweet in results:
-   # print(tweet.text)
-   print (tweet.user.screen_name,"Tweeted:",tweet.text)
 
-   # finally-perform_sentiment_analysis_on_tweets
-   analysis = TextBlob(tweet.text)
+   print(tweet.text.translate(non_bmp_map))
+
+   analysis = TextBlob(tweet.text.translate(non_bmp_map))
+
    print(analysis.sentiment)
    print("")
 
+#    results_array.append(tweet.text.translate(non_bmp_map))
+#
+# results_text= ' '.join(results_array)
+# print(results_text)
+#
+   # finally-perform_sentiment_analysis_on_tweets
+
+
+# print (tweet.user.screen_name,"Tweeted:",tweet.text)
 #
 #
 # # foreach through all tweets pulled

@@ -1,0 +1,50 @@
+Melissa Malala
+RT @nekulachenkov: You are an army general accused of corruption. Do you respond to these accusations and try prove them wrong? Of course n…
+Sentiment(polarity=-0.22499999999999998, subjectivity=0.7)
+
+Corruption doesn't limit to money launder. The most corruption on earth is lopsided appoin'ment. You adm has so far… https://t.co/R7Xkb3mEkb
+Sentiment(polarity=0.5, subjectivity=0.5)
+
+RT @DMarigiri_: With the actions of today on Finance Bill =&gt; Food security is a mirage and not feasible , manufacturing is a dream and so t…
+Sentiment(polarity=0.0, subjectivity=0.0)
+
+@DayneWayne @IfyAniebo True..Africa we are lagging behind..I know corruption levels in Nigeria and Kenya are high..no arguments
+Sentiment(polarity=0.0, subjectivity=0.0)
+
+RT @YinusaSodeeqOl2: Nigeria police officer Kehinde Agbede Mokola beats a married woman in public because of Fifty Naira. It happen in Ibad…
+Sentiment(polarity=0.125, subjectivity=0.15833333333333333)
+
+RT @DMarigiri_: With the actions of today on Finance Bill =&gt; Food security is a mirage and not feasible , manufacturing is a dream and so t…
+Sentiment(polarity=0.0, subjectivity=0.0)
+
+RT @nnabros: So I got this WhatsApp broadcast that Kemi Adeosun was forced to resign because she complained about the corruption at NNPC pa…
+Sentiment(polarity=-0.30000000000000004, subjectivity=0.2)
+
+RT @DCalyne: I love my country so much. Uganda is home no matter what.
+But if y’all expect me to turn a blind eye to the things that make m…
+Sentiment(polarity=0.06666666666666665, subjectivity=0.48888888888888893)
+
+RT @MichaelOrodare: This is the same man who said he's "supporting Buhari because he's fighting corruption"
+But he's not supporting Ambode…
+Sentiment(polarity=0.041666666666666664, subjectivity=0.20833333333333334)
+
+RT @ndiyagodola: “The top is what sets the tone. And once the tone is right from the top, you will be amazed how corruption will be dissemi…
+Sentiment(polarity=0.42857142857142855, subjectivity=0.5119047619047619)
+
+RT @limuru_finest: @DMarigiri_ Corruption for example... https://t.co/mgliWrrj5N
+Sentiment(polarity=0.0, subjectivity=0.0)
+
+@MReco12 @comrade_fred Big Pharma bought the entire US government with a few million dollars, corruption would be m… https://t.co/kXbDzOKuYV
+Sentiment(polarity=-0.06666666666666667, subjectivity=0.27499999999999997)
+
+RT @realKefason: Breaking:
+Who may have killed Major General Idris Alkali, an upright officer said to have been angry with the corruption g…
+Sentiment(polarity=-0.146875, subjectivity=0.5)
+
+RT @MichaelOrodare: This is the same man who said he's "supporting Buhari because he's fighting corruption"
+But he's not supporting Ambode…
+Sentiment(polarity=0.041666666666666664, subjectivity=0.20833333333333334)
+
+RT @limuru_finest: @DMarigiri_ Corruption for example... https://t.co/mgliWrrj5N
+Sentiment(polarity=0.0, subjectivity=0.0)
+

@@ -1,0 +1,18 @@
+.top {
+   height: 200px;
+   background-color: #3f232d
+}
+
+.twing-title {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 76px;
+}
+
+.nav {
+   height: 60px;
+   background-color: rgba(72, 75, 72)
+}
+
+li {
+   list-style: none;
+}
