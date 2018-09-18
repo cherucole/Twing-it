@@ -25,4 +25,4 @@ Matplotlib
 Plotly
 
 ## License 
-Copyright (C) 2018 ~ Victor Ireri, Collins Cheruiyot, Tom Chege, Melissa Malala,
+Copyright (C) 2018 ~ Victor Ireri, Brian Mutai , Collins Cheruiyot, Tom Chege, Melissa Malala,
