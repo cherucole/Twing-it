@@ -36,7 +36,7 @@ class Listener(StreamListener):
         print (row)
         data = f'{user_name}, {tweet_time}, {polarity}, {subjectivity}, {tweet}'
 
-        with open('data.csv', 'a') as csvFile:
+        with open('datauhuru.csv', 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(row)
 
@@ -51,5 +51,5 @@ l = Listener()
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 stream = Stream(auth, l)
-stream.filter(track=['trump'])
+stream.filter(track=['Senate'])
 
