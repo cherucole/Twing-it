@@ -23,26 +23,44 @@ with open("twitter_credentials.json", "r") as file:
 python_tweets = Twython(consumer_key, consumer_secret)
 
 # Create our query
-query = {'q': 'learn python',
-        'result_type': 'popular',
-        'count': 100,
+query = {'q': 'safaricom',
+        'result_type': 'recent',
+        'count': 300,
         'lang': 'en',
         }
 
 # Search tweets
-dict_ = {'user': [], 'date': [], 'text': [], 'favorite_count': []}
-for status in python_tweets.search(**query)['statuses']:
-    dict_['user'].append(status['user']['screen_name'])
-    dict_['date'].append(status['created_at'])
-    dict_['text'].append(status['text'])
-    dict_['favorite_count'].append(status['favorite_count'])
+dict_ = {'user': [], 'date': [], 'text': [], 'favorite_count': [], 'polarity':[], 'subjectivity': []}
+non_bmp_map= dict.fromkeys(range(0x10000, sys.maxunicode +1), 0xfffd)
 
 
-    print(status)
+for tweet in python_tweets.search(**query)['statuses']:
 
+    print(tweet['text'].translate(non_bmp_map))
+
+    analysis = TextBlob(tweet['text'].translate(non_bmp_map))
+
+    print(analysis.sentiment)
+    print("")
+
+    dict_['user'].append(tweet['user']['screen_name'])
+    dict_['date'].append(tweet['created_at'])
+    dict_['text'].append(tweet['text'])
+    dict_['favorite_count'].append(tweet['favorite_count'])
+    dict_['polarity'].append(analysis.sentiment.polarity)
+    dict_['subjectivity'].append(analysis.sentiment.subjectivity)
+
+    print(tweet)
 
 # Structure data in a pandas DataFrame for easier manipulation
 df = pd.DataFrame(dict_)
 df.sort_values(by='favorite_count', inplace=True, ascending=False)
-df.head(5)
+df.head(200)
+df.to_csv('redsan1.csv')
 
+print(df)
+
+
+
+# Store it ina csv
+# Load credentials from json file
