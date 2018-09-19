@@ -30,6 +30,7 @@
                         {% if current_user.is_authenticated %} {% if current_user.is_admin %}
 
         <li><a href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
+                       <li><a href="{{ url_for('main.plot') }}">PLOT</a></li>
 
 
         <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
@@ -60,6 +61,70 @@
            </div>
        </div>
    </div>
+    <div class="jumbotron text-center mb-0" style="background-color:grey;">
+
+       OUR CORE SERVICES
+
+        CARDS THAT LIST THE FOLLOWING:
+       1. DATA MINING
+        2. DATA VISUALISATION
+        3. DATA ANALYTICS
+
+    </div>
+
+
+
+
+   <div class="jumbotron text-center mb-0" style="background-color:blue;">
+
+       OUR CLIENTS
+
+       CAROUSEL WITH LOGOS OF CLIENTS
+
+   </div>
+
+
+   <div class="jumbotron text-center mb-0 mt-0" style="background-color:red;">
+   <p><strong>CONTACT US</strong>
+               <br>
+               <br>
+       <br>
+       <strong>Main Office :</strong>
+ <br>
+Moringa School, Ngong Lane Plaza, Nairobi Kenya.
+ <br>
+
+<strong>Email:</strong>
+               <br>
+       info@twingit.co.ke
+        <br>
+
+
+<strong>Phone:</strong>
+               <br>
+
+       (+254)-123 456 789
+        <br>
+       <strong>Address:</strong>
+       <br>
+P.O.Box 12345 - 00100 Nairobi Kenya
+        <br>
+       <p>
+
+
+
+        </div>
+
+
+    <div class="jumbotron text-center" style="background-color:yellow;">
+
+       footer section
+
+
+
+   </div>
+
+
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

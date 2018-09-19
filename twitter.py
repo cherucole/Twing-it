@@ -59,12 +59,13 @@ print(user.name)
 
 
 # The search term you want to find
-query = "corruption"
+query = "tesla"
 # Language code (follows ISO 639-1 standards)
 language = "en"
-rpp=100000
+rpp=300000000
 
-geocode = "40.7128,74.0060,5000km"
+geocode = "40.7128,74.0060,5000000km"
+
 
 # Calling the user_timeline function with our parameters
 results = api.search(q=query, lang=language, geocode=geocode, rpp=rpp)
