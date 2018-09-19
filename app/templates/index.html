@@ -30,6 +30,7 @@
                         {% if current_user.is_authenticated %} {% if current_user.is_admin %}
 
         <li><a href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
+                       <li><a href="{{ url_for('main.plot') }}">PLOT</a></li>
 
 
         <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
