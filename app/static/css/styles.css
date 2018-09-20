@@ -1,10 +1,15 @@
 .top {
    height: 200px;
    background-color: black;
+}
 
 .twing-title {
    font-family: 'Times New Roman', Times, serif;
    font-size: 76px;
+}
+
+.nav-link {
+  padding-left: 0 !important;
 }
 
 .nav {

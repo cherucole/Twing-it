@@ -4,7 +4,7 @@ from .forms import UpdateProfile
 from ..models import  User
 from flask_login import login_required, current_user
 from .. import db, photos
-import markdown2
+
 
 import plotly.plotly as py
 import plotly.graph_objs as go
