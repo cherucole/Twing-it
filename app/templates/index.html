@@ -1,207 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-   <link rel="stylesheet" href="{{url_for('static', filename ='css/styles.css')}}">
-   <link rel="stylesheet" href="/bootstrap.css">
-   <title>Document</title>
-</head>
 
-<body>
-   <div class="top d-flex align-items-center justify-content-center">
-       <h1 class="text-light twing-title">TwingIT</h1>
-   </div>
-   <div class="nav">
-       <div class="container">
-           <div class="nav">
-               <div class="home d-flex align-items-center ml-5">
-                   <h1 class="text-light mb-0">Home</h1>
-               </div>
-               <div class="nav-content mr-5 ml-auto d-flex align-items-center">
-                   <ul class="nav-ul d-flex align-items-center mb-0">
-                       <li>
-                           <a class="nav-link" href="{{url_for('main.about') }}">About</a>
-                       </li>
-                         <li><a href="{{ url_for('main.plot') }}">Plot</a></li>
-                        {% if current_user.is_authenticated %} {% if current_user.is_admin %}
+    <!-- Custom fonts for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/styles.css')}}">
 
-        <li><a href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
+    <title>Document</title>
 
-
-
-        <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-
-
-        {% else %}
-
-        <li><a href="{{ url_for('main.dashboard') }}">Dashboard</a></li>
-
-{% endif %}
-
-                       <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
-
-
-        <li><a><i class="fa fa-user"></i> Hi, {{ current_user.username }}!</a></li>
-
-
-        {% else %}
-        <li><a href="/">Home</a></li>
-        <li><a href="{{url_for('auth.register')}}">Register</a></li>
-        <li class="divider"></li>
-        <li><a href="{{url_for('auth.login')}}">Log in</a></li>
-
-        {% endif %}
-
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </div>
-    <div class="jumbotron text-center mb-0" style="background-color:black;">
-
-        <h1 style="color:white;"> OUR CORE SERVICES</h1>
-        <div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Data Mining</h5>
-      <p class="card-text">We work with datasets using methods at the intersection of machine learning,
-          statistics, and database systems in an
-          overall goal to extract strategic information for your company.</p>
-
-      <p class="card-text"><small class="text-muted">Read More</small></p>
-    </div>
+  </head>
+  <div class="top d-flex align-items-center justify-content-center">
+    <h1 class="text-light twing-title">TwingIT</h1>
   </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Data Cleaning</h5>
-      <p class="card-text">We detect and correct inaccurate records from a record set,
-          table, or database and then replace,
-          modify, or delete coarse data for deeper analysis.</p>
-      <p class="card-text"><small class="text-muted">Read More</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Data Analytics</h5>
-      <p class="card-text">We conduct qualitative and quantitative analysis using Python
-          to enhance productivity and business gain. We extract
-          data and analyze behavioral data and patterns which
-          vary according to your organizational requirements.</p>
-      <p class="card-text"><small class="text-muted">Read More</small></p>
-    </div>
-  </div>
-            <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Data Visualisation</h5>
-      <p class="card-text">We use Vincent(Python data capabilities with Javascript graphing capabilities) to build
-      beautiful charts that present your data in a palatable manner for your stakeholders(investors, employees). </p>
-      <p class="card-text"><small class="text-muted">Read More</small></p>
-    </div>
-  </div>
-</div>
+  <div class="nav">
+    <div class="container">
+      <div class="nav">
+        <div class="home d-flex align-items-center ml-5">
+          <h1 class="text-light mb-0">Home</h1>
+        </div>
+        <div class="nav-content ml-auto mr-0 d-flex align-items-center">
+          <ul class="nav-ul d-flex align-items-center mb-0">
+            <li>
+              <a class="nav-link" href="{{url_for('main.about') }}">About</a>
+            </li>
+            <li><a class="nav-link" href="{{ url_for('main.plot') }}">Plot</a></li>
+            {% if current_user.is_authenticated %} {% if current_user.is_admin %}
 
-    </div>
+            <li><a class="nav-link" href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
+
+            <li><a class="nav-link" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+
+            {% else %}
+
+            <li><a class="nav-link" href="{{ url_for('main.dashboard') }}">Dashboard</a></li>
+
+            {% endif %}
+
+            <li><a class="nav-link" href="{{url_for('auth.logout')}}">Log out</a></li>
 
 
-   <div class="jumbotron text-center mb-0" style="background-color:black;">
+            <li><a class="nav-link"><i class="fa fa-user"></i> Hi, {{ current_user.username }}!</a></li>
 
-      <!--edit here CAROUSEL WITH OUR CLIENTS -->
 
-<div class="container">
-  <h2>Our Work</h2>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+            {% else %}
+            <li><a class="nav-link" href="/">Home</a></li>
+            <li><a class="nav-link" href="{{url_for('auth.register')}}">Register</a></li>
+            <li class="divider"></li>
+            <li><a class="nav-link" href="{{url_for('auth.login')}}">Log in</a></li>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="la.jpg" alt="Safaricom Sentiment" style="width:50%;">
+            {% endif %}
+
+          </ul>
+        </div>
       </div>
+    </div>
+  </div>
+  <div class="jumbotron text-center mb-0" style="background-color:black;">
 
-      <div class="item">
-        <img src="chicago.jpg" alt="KPLC Sentiment" style="width:50%;">
+    <h1 style="color:white;"> OUR CORE SERVICES</h1>
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Data Mining</h5>
+          <p class="card-text">We work with datasets using methods at the intersection of machine learning,
+            statistics, and database systems in an
+            overall goal to extract strategic information for your company.</p>
+
+          <p class="card-text"><small class="text-muted">Read More</small></p>
+        </div>
       </div>
-
-      <div class="item">
-        <img src="ny.jpg" alt="Matiangi Sentiment" style="width:50%;">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Data Cleaning</h5>
+          <p class="card-text">We detect and correct inaccurate records from a record set,
+            table, or database and then replace,
+            modify, or delete coarse data for deeper analysis.</p>
+          <p class="card-text"><small class="text-muted">Read More</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Data Analytics</h5>
+          <p class="card-text">We conduct qualitative and quantitative analysis using Python
+            to enhance productivity and business gain. We extract
+            data and analyze behavioral data and patterns which
+            vary according to your organizational requirements.</p>
+          <p class="card-text"><small class="text-muted">Read More</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Data Visualisation</h5>
+          <p class="card-text">We use Vincent(Python data capabilities with Javascript graphing capabilities) to build
+            beautiful charts that present your data in a palatable manner for your stakeholders(investors, employees). </p>
+          <p class="card-text"><small class="text-muted">Read More</small></p>
+        </div>
       </div>
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  </div>
+
+
+  <div class="jumbotron text-center mb-0" style="background-color:black;">
+
+    <!--edit here CAROUSEL WITH OUR CLIENTS -->
+
+    <div class="container">
+      <h2>Our Work</h2>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="la.jpg" alt="Safaricom Sentiment" style="width:50%;">
+
+      </div>
+
+          <div class="item">
+            <img src="chicago.jpg" alt="KPLC Sentiment" style="width:50%;">
+
+      </div>
+
+          <div class="item">
+            <img src="ny.jpg" alt="Matiangi Sentiment" style="width:50%;">
+
+      </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
+      </div>
+    </div>
   </div>
-</div>
-   </div>
 
 
 
 
-   <div class="jumbotron text-center mb-0 mt-0" style="background-color:black;">
-   <p style="color:white;"> <strong>CONTACT US</strong>
-               <br>
-               <br>
-       <br>
-       <strong>Main Office :</strong>
- <br>
+  <div class="jumbotron text-center mb-0 mt-0" style="background-color:black;">
+    <p style="color:white;"> <strong>CONTACT US</strong>
+      <br>
+      <br>
+      <br>
+      <strong>Main Office :</strong>
+      <br>
 Moringa School, Ngong Lane Plaza, Nairobi Kenya.
- <br>
+      <br>
 
-<strong>Email:</strong>
-               <br>
+      <strong>Email:</strong>
+      <br>
        info@twingit.co.ke
-        <br>
+      <br>
 
 
-<strong>Phone:</strong>
-               <br>
+      <strong>Phone:</strong>
+      <br>
 
        (+254)-123 456 789
-        <br>
-       <strong>Address:</strong>
-       <br>
+      <br>
+      <strong>Address:</strong>
+      <br>
 P.O.Box 12345 - 00100 Nairobi Kenya
-        <br>
-       <p>
+      <br>
+      <p>
 
 
 
-        </div>
+  </div>
 
 
-    <div class="jumbotron text-center" style="background-color:yellow;">
+  <div class="jumbotron text-center" style="background-color:yellow;">
 
-       footer section
-
-
-
-   </div>
+    footer section
 
 
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-   <script src="/scripts.js"></script>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="/scripts.js"></script>
 </body>
 
 </html>
