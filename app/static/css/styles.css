@@ -2,6 +2,7 @@
    height: 200px;
    background-color: rgba(32, 32, 32, 0.637);
 
+
 }
 .twing-title {
    font-family: 'Times New Roman', Times, serif;
@@ -10,6 +11,7 @@
 .nav-link {
   padding-left: 0 !important;
 }
+
 .nav {
    height: 60px;
 
@@ -100,5 +102,6 @@ border-radius:0;
   height: auto;
   z-index: -100;
 }
+
 
 

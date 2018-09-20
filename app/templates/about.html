@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <!-- Custom fonts for this template -->
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{url_for('static', filename ='css/styles.css')}}">
     <title>Document</title>
+
   </head>
   <div class="top d-flex align-items-center justify-content-center">
     <h1 class="text-light twing-title">TwingIT</h1>
@@ -35,12 +38,14 @@
             {% endif %}
             <li><a class="nav-link" href="{{url_for('auth.logout')}}">Log out</a></li>
             <li><a class="nav-link"><i class="fa fa-user"></i> Hi, {{ current_user.username }}!</a></li>
+
             {% else %}
             <li><a class="nav-link" href="/">Home</a></li>
             <li><a class="nav-link" href="{{url_for('auth.register')}}">Register</a></li>
             <li class="divider"></li>
             <li><a class="nav-link" href="{{url_for('auth.login')}}">Log in</a></li>
             {% endif %}
+
           </ul>
         </div>
       </div>
@@ -60,14 +65,13 @@
                 <p>
 Twing It is a data analytics startup company headquartered and registered in Nairobi, Kenya.
 
-                    <br>
+
+                <br>
                     We are a team of high tech professionals with vast experience in the African market implementing
                     data analytics solutions.
 
-                    <br>
-                    We develop data analytics solutions for companies which have data but insuficient capacity to generate insights.
-</p>
-
+                <br>
+                    We develop data analytics solutions for companies which have data but insuficient capacity to generate insights.</p>
             </div>
           </div>
         </div>
@@ -79,35 +83,35 @@ Twing It is a data analytics startup company headquartered and registered in Nai
       <p class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
-        <p> <b>The Need for data analytics</b>
-Since 2010, business are caught up in the big data buzz. We are all collecting more data than ever before.
-        <br>
+          <p> <b>The Need for data analytics</b>
+            Since 2010, business are caught up in the big data buzz. We are all collecting more data than ever before.
+            <br>
         Unfortunately, businesses lack the ability to convert data into meaningful insights!
-        <br>
+            <br>
 
         While engaging industrial partners in Kenya, We have realized the growing demand for seamless availability and utilization of data to drive business perfomance. Due to this need, we are growing wings by creating awareness, replicating utilization of RDBMS, big data, Data mining and data visualization in all business sectors.
 We are a data analytics service provider with the right mix of data science expertise to support business build winning data strategies.
-<br>
-        <b>Skillset</b>
-        <br>
+            <br>
+            <b>Skillset</b>
+            <br>
 Our services are supported by a strong skillset relevant for laying a data management strategy in any industry. Our ever growing set of tools and technologies includes, Python & R,Tableau & PowerBI, SQL & PLSQL, Talend & Dataiku, Ms Excel, Postgres, Mysql & SQL Server, D3.JS, Tensorflow etc.
 
-        <br>
-        <b> Visual Analytics</b>
-        <br>
+            <br>
+            <b> Visual Analytics</b>
+            <br>
 Our services are tailored towards rapid solution implementation.
 
         Effectiveness of our implementations are visible from week 2 which offers <b>dynamic reporting and </b>dashboarding .
 
 
-        This way, executives are able to interpret data faster through pictures and graphical presentations.
-        Visualizing empowers organizations to interpret data more effectively and gain quickly answers to current business trends.
-<br>
-        <br>
-        <br>
-         <b>Twing It</b>
-    </div>
+            This way, executives are able to interpret data faster through pictures and graphical presentations.
+            Visualizing empowers organizations to interpret data more effectively and gain quickly answers to current business trends.
+            <br>
+            <br>
+            <br>
+            <b>Twing It</b>
         </div>
+    </div>
 
 
     <hr>
@@ -150,8 +154,8 @@ Our services are tailored towards rapid solution implementation.
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   </body>
 

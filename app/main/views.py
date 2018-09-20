@@ -21,8 +21,6 @@ from flask import Flask, render_template, url_for, jsonify, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-
-
 import plotly.plotly as py
 import plotly.graph_objs as go
 import plotly.figure_factory as FF
@@ -180,3 +178,4 @@ def data():
 #         jsonify({'twing': data_list})
 #         return render_template('graph.html', form=form)
 #     return render_template('graph.html', form=form)
+
