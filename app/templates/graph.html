@@ -1,0 +1,59 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="search">
+        <!--<form action="" method="POST">-->
+            <!--{{ form.csrf_token }}-->
+            <!--<legend>Search twitter</legend>-->
+            <!--<fieldset>-->
+                <!--<div class="form-group d-inline-flex">-->
+                    <!--{{ form.search(class='form-control') }}-->
+                    <!--{{ form.submit(class='btn btn-sm btn-outline-success') }}-->
+                <!--</div>-->
+            <!--</fieldset>-->
+        <!--</form>-->
+        <!---->
+        <!---->
+
+        {{wtf.quick_form(form)}}
+    </div>
+
+
+    <label id="search" for="">{{ search }}</label>
+
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li class="tweet"></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <canvas id="chartTwo"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js" integrity="sha256-nAGlRh0I/Bl11HX9TGce1M8dg9bnxROCb425L4fT848="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ="
+        crossorigin="anonymous"></script>
+    <script src="../static/js/victor.js"></script>
+</body>
+
+</html>

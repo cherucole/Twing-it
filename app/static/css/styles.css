@@ -1,27 +1,107 @@
 .top {
    height: 200px;
-   background-color: black;
-}
+   background-color: rgba(32, 32, 32, 0.637);
 
+
+}
 .twing-title {
    font-family: 'Times New Roman', Times, serif;
    font-size: 76px;
 }
-
 .nav-link {
   padding-left: 0 !important;
 }
 
 .nav {
    height: 60px;
-   background-color: rgba(72, 75, 72)
+
+
+}
+
+.nav-btm {
+    background-color: rgba(72, 75, 72, 0.7)
 }
 
 li {
    list-style: none;
 }
-
 .jumbotron {
 margin-bottom:0 !important;
 border-radius:0;
+}.figure {
+    width: 150%;
+    height: 100%;
+    left: 0%;
+    position: relative;
+    background-color: #4f4943;
+    animation-name: slider;
+    animation-duration: 35000ms;
+    animation-iteration-count: infinite;
 }
+
+.slide {
+    width: 100%;
+}
+
+.bg-lavender {
+    background-color: #17a2b8
+}
+
+.slide-img {
+    width: 50%;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-color: rgba(#4f4943, 0.7)
+}
+
+@keyframes slider {
+    0% {
+        left: 0%
+    }
+
+    27% {
+        left: 0%;
+    }
+
+    33% {
+        left: -50%;
+    }
+
+    60% {
+        left: -50%;
+    }
+
+    66% {
+        left: -100%;
+    }
+    94% {
+        left: -100%;
+    }
+
+    100% {
+        left: -150%;
+    }
+}
+
+/* End of home page image slider css styling */
+/* styling for the pitches on the homepage */
+
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+
+
