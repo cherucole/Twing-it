@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ac70ed4-a986-4b92-99ca-c49d4670419c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/static/photos/190094.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/City-Cleaners-Icon-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/Graphicloads-100-Flat-Analytics.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/KPLC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/MATIANGI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/SAFARICOM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/Webalys-Kameleon.pics-Analytics.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/analytics_922082.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/chart_graph_graphic_graphics_icon_512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/data.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/futureindex.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/text-mining-icon-2793702_960_720.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/twing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/photos/videoindex.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geograph.py" beforeDir="false" afterPath="$PROJECT_DIR$/geograph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsaved_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/newsaved_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +22,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="3" />
+          <entry key="Procfile" value="4" />
           <entry key="admin" value="1" />
           <entry key="css" value="7" />
           <entry key="csv" value="26" />
@@ -54,8 +34,8 @@
           <entry key="md" value="7" />
           <entry key="png" value="6" />
           <entry key="py" value="65" />
-          <entry key="sh" value="5" />
-          <entry key="txt" value="26" />
+          <entry key="sh" value="6" />
+          <entry key="txt" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -65,7 +45,7 @@
           <entry key="Image" value="8" />
           <entry key="JSON" value="4" />
           <entry key="Markdown" value="7" />
-          <entry key="PLAIN_TEXT" value="64" />
+          <entry key="PLAIN_TEXT" value="67" />
           <entry key="Python" value="65" />
         </counts>
       </usages-collector>
@@ -97,10 +77,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="225">
               <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -137,6 +117,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/about.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="172">
@@ -156,18 +150,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/photos/Graphicloads-100-Flat-Analytics.ico">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/photos/text-mining-icon-2793702_960_720.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/static/photos/analytics_922082.png">
           <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/start.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -229,7 +222,6 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/specs.md" />
         <option value="$PROJECT_DIR$/app/twitter.py" />
-        <option value="$PROJECT_DIR$/start.sh" />
         <option value="$PROJECT_DIR$/tweets.json" />
         <option value="$PROJECT_DIR$/wordcloud.txt" />
         <option value="$PROJECT_DIR$/wordcloudleadership.txt" />
@@ -256,12 +248,13 @@
         <option value="$PROJECT_DIR$/app/templates/about.html" />
         <option value="$PROJECT_DIR$/app/static/css/styles.css" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
+        <option value="$PROJECT_DIR$/start.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="373" />
-    <option name="y" value="24" />
+    <option name="x" value="120" />
+    <option name="y" value="37" />
     <option name="width" value="1561" />
     <option name="height" value="735" />
   </component>
@@ -359,10 +352,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="373" y="24" width="1561" height="735" extended-state="0" />
-    <editor active="true" />
+    <frame x="120" y="37" width="1561" height="735" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17272727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17272727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -373,7 +365,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2799378" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.525661" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.24572317" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -415,9 +407,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/plot.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -539,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saved_tweets.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-788">
@@ -628,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matiangi.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -701,7 +676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="225">
           <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -733,6 +708,23 @@
             <element signature="n#style#0;n#h5#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#7729#7735#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
         </state>
       </provider>
     </entry>
