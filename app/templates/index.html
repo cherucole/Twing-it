@@ -45,6 +45,8 @@
             </li>
 
             <li><a class="nav-link" href="{{ url_for('main.plot') }}">Plot</a></li>
+                          <li><a class="nav-link" href="#searchsection">Analytics</a></li>
+
             {% if current_user.is_authenticated %} {% if current_user.is_admin %}
             <li><a class="nav-link" href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
             <li><a class="nav-link" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
@@ -67,9 +69,10 @@
   <div class="jumbotron text-center mb-0" style="background-color:black;">
 
     <h1 style="color:white;"> OUR CORE SERVICES</h1>
+       <div class="container">
     <div class="card-deck">
       <div class="card">
-        <img class="card-img-top" src="../static/photos/text-mining-icon-2793702_960_720.png" alt="Card image cap">
+        <img class="card-img-top py-3 px-1" src="../static/photos/text-mining-icon-2793702_960_720.png" alt="Card image cap" >
         <div class="card-body">
           <h5 class="card-title">Data Mining</h5>
           <p class="card-text">We work with datasets using methods at the intersection of machine learning, statistics, and
@@ -79,7 +82,7 @@
         </div>
       </div>
       <div class="card">
-        <img class="card-img-top" src="../static/photos/City-Cleaners-Icon-01.png" alt="Card image cap">
+        <img class="card-img-top py-3 px-1" src="../static/photos/City-Cleaners-Icon-01.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Data Cleaning</h5>
           <p class="card-text">We detect and correct inaccurate records from a record set, table, or database and then replace,
@@ -88,7 +91,7 @@
         </div>
       </div>
       <div class="card">
-        <img class="card-img-top" src="../static/photos/analytics_922082.png" alt="Card image cap">
+        <img class="card-img-top py-3 px-1" src="../static/photos/analytics_922082.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Data Analytics</h5>
           <p class="card-text">We conduct qualitative and quantitative analysis using Python to enhance productivity and
@@ -98,7 +101,7 @@
         </div>
       </div>
       <div class="card">
-        <img class="card-img-top" src="../static/photos/chart_graph_graphic_graphics_icon_512.png" alt="Card image cap">
+        <img class="card-img-top py-3 px-1" src="../static/photos/chart_graph_graphic_graphics_icon_512.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Data Visualisation</h5>
           <p class="card-text">We use Vincent(Python data capabilities with Javascript graphing capabilities) to build beautiful
@@ -107,6 +110,7 @@
         </div>
       </div>
     </div>
+  </div>
 
   </div>
 
@@ -185,19 +189,7 @@
             <hr style="color:white;" >
             <h5 style="color:white;">&copy; Twing-IT</h5>
 
-               <div class="search">
-        <!--<form action="" method="POST">-->
-            <!--{{ form.csrf_token }}-->
-            <!--<legend>Search twitter</legend>-->
-            <!--<fieldset>-->
-                <!--<div class="form-group d-inline-flex">-->
-                    <!--{{ form.search(class='form-control') }}-->
-                    <!--{{ form.submit(class='btn btn-sm btn-outline-success') }}-->
-                <!--</div>-->
-            <!--</fieldset>-->
-        <!--</form>-->
-        <!---->
-        <!---->
+               <div class="search" id="searchsection">
 
         {{wtf.quick_form(form)}}
     </div>
