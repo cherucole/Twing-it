@@ -64,56 +64,50 @@ class MyStreamer(TwythonStreamer):
 stream = MyStreamer(consumer_key, consumer_secret,
                     access_token, access_token_secret)
 # Start the stream
-stream.statuses.filter(track='python')
+stream.statuses.filter(track='safaricom')
 
 
-
-tweets = pd.read_csv("newsaved_tweets.csv")
-tweets.head()
-
-
-print(tweets)
-
-
-# Extract hashtags and put them in a list
-list_hashtag_strings = [entry for entry in tweets.hashtags]
-list_hashtag_lists = ast.literal_eval(','.join(list_hashtag_strings))
-hashtag_list = [ht.lower() for list_ in list_hashtag_lists for ht in list_]
-
-# Count most common hashtags
-counter_hashtags = Counter(hashtag_list)
-counter_hashtags.most_common(20)
-print(counter_hashtags)
-
-
-geolocator = Nominatim()
-
-# Go through all tweets and add locations to 'coordinates' dictionary
-coordinates = {'latitude': [], 'longitude': []}
-for count, user_loc in enumerate(tweets.location):
-    try:
-        location = geolocator.geocode(user_loc)
-
-        # If coordinates are found for location
-        if location:
-            coordinates['latitude'].append(location.latitude)
-            coordinates['longitude'].append(location.longitude)
-
-    # If too many connection requests
-    except:
-        pass
-
-# Instantiate and center a GoogleMapPlotter object to show our map
-gmap = gmplot.GoogleMapPlotter(30, 0, 3)
-
-# Insert points on the map passing a list of latitudes and longitudes
-gmap.heatmap(coordinates['latitude'], coordinates['longitude'], radius=20)
-
-# Save the map to html file
-gmap.draw("python_heatmap.html")
-
-# Store it ina csv
-# Load credentials from json file
-
-
-
+# tweets = pd.read_csv("newsaved_tweets.csv")
+# tweets.head()
+#
+#
+# print(tweets)
+#
+#
+# # Extract hashtags and put them in a list
+# list_hashtag_strings = [entry for entry in tweets.hashtags]
+# list_hashtag_lists = ast.literal_eval(','.join(list_hashtag_strings))
+# hashtag_list = [ht.lower() for list_ in list_hashtag_lists for ht in list_]
+#
+# # Count most common hashtags
+# counter_hashtags = Counter(hashtag_list)
+# counter_hashtags.most_common(20)
+# print(counter_hashtags)
+#
+# geolocator = Nominatim()
+#
+# # Go through all tweets and add locations to 'coordinates' dictionary
+# coordinates = {'latitude': [], 'longitude': []}
+# for count, user_loc in enumerate(tweets.location):
+#     try:
+#         location = geolocator.geocode(user_loc)
+#
+#         # If coordinates are found for location
+#         if location:
+#             coordinates['latitude'].append(location.latitude)
+#             coordinates['longitude'].append(location.longitude)
+#
+#     # If too many connection requests
+#     except:
+#         pass
+#
+# # Instantiate and center a GoogleMapPlotter object to show our map
+# gmap = gmplot.GoogleMapPlotter(30, 0, 3)
+#
+# # Insert points on the map passing a list of latitudes and longitudes
+# gmap.heatmap(coordinates['latitude'], coordinates['longitude'], radius=20)
+#
+# # Save the map to html file
+# gmap.draw("python_heatmap.html")
+#
+#
