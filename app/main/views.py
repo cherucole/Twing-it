@@ -1,10 +1,27 @@
 from flask import render_template, request, redirect,url_for, abort, flash
 from . import main
-from .forms import UpdateProfile
-from ..models import  User
+from .forms import UpdateProfile, SearchForm
+from ..models import  User, Listener
 from flask_login import login_required, current_user
 from .. import db, photos
 import markdown2
+import tweepy
+from textblob import TextBlob
+import json
+import sys
+import re
+import csv
+import os
+import time
+from datetime import datetime
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+from flask import Flask, render_template, url_for, jsonify, redirect
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+
+
 
 import plotly.plotly as py
 import plotly.graph_objs as go
@@ -14,12 +31,24 @@ import numpy as np
 import pandas as pd
 
 # INDEX PAGE
-@main.route('/')
+@main.route('/', methods=['GET', 'POST'])
 def index():
-    """ View root page function that returns index page """
+    form = SearchForm()
+    print(form.validate_on_submit())
+    data_list = []
+    if form.validate_on_submit():
+        os.remove('search.csv')
+        os.remove('datam.csv')
+        search = form.search.data
+        Listener.runTweets(search)
+    # print('\n\n\n\n\n\n\n  done ')
+    reader = csv.reader(open('datam.csv', 'r'))
+    for row in reader:
+        data_list.append(row)
+        jsonify({'twing': data_list})
 
-    title = 'WELCOME TO TWING'
-    return render_template('index.html', title = title, )
+
+    return render_template('index.html', form=form)
 
 @main.route('/about')
 def about():
@@ -121,3 +150,33 @@ def plot():
     py.plot(fig, filename='simple-plot-from-csv')
 
     return render_template('plot.html', title="Dashboard")
+
+
+@main.route('/data')
+@login_required
+def data():
+    reader = csv.reader(open('datam.csv', 'r'))
+    data_list = []
+    for row in reader:
+        data_list.append(row)
+    return jsonify({'twing': data_list})
+
+
+# @main.route('/analytics', methods=['GET', 'POST'])
+# @login_required
+# def analytics():
+#     form = SearchForm()
+#     print(form.validate_on_submit())
+#     data_list = []
+#     if form.validate_on_submit():
+#         os.remove('search.csv')
+#         os.remove('datam.csv')
+#         search = form.search.data
+#         Listener.runTweets(search)
+#     # print('\n\n\n\n\n\n\n  done ')
+#     reader = csv.reader(open('datam.csv', 'r'))
+#     for row in reader:
+#         data_list.append(row)
+#         jsonify({'twing': data_list})
+#         return render_template('graph.html', form=form)
+#     return render_template('graph.html', form=form)

@@ -1,3 +1,5 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+
 <!DOCTYPE html>
 <html lang="en">
 <body>
@@ -13,7 +15,8 @@
     <title>Document</title>
   </head>
   <div class="top d-flex align-items-center justify-content-center" style="height:100vh;">
-    <img class="img-thumbnail border border-info" src="../static/photos/tWing.png" style="height:50%; opacity:0.65;" alt="">
+    <img src="../static/photos/tWingtext.png" style="height:50%; " alt="">
+    <!--<img class="img-thumbnail border border-info" src="../static/photos/tWing.png" style="height:50%; opacity:0.65;" alt="">-->
 
     <video autoplay loop id="video-background" muted plays-inline>
   <source src="../static/photos/videoindex.mp4" type="video/mp4">
@@ -35,6 +38,7 @@
             <li>
               <a class="nav-link" href="{{url_for('main.about') }}">About</a>
             </li>
+
             <li><a class="nav-link" href="{{ url_for('main.plot') }}">Plot</a></li>
             {% if current_user.is_authenticated %} {% if current_user.is_admin %}
             <li><a class="nav-link" href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
@@ -172,6 +176,40 @@
             <hr style="color:white;" >
             <h5 style="color:white;">&copy; Twing-IT</h5>
 
+               <div class="search">
+        <!--<form action="" method="POST">-->
+            <!--{{ form.csrf_token }}-->
+            <!--<legend>Search twitter</legend>-->
+            <!--<fieldset>-->
+                <!--<div class="form-group d-inline-flex">-->
+                    <!--{{ form.search(class='form-control') }}-->
+                    <!--{{ form.submit(class='btn btn-sm btn-outline-success') }}-->
+                <!--</div>-->
+            <!--</fieldset>-->
+        <!--</form>-->
+        <!---->
+        <!---->
+
+        {{wtf.quick_form(form)}}
+    </div>
+
+
+    <label id="search" for="">{{ search }}</label>
+             <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li class="tweet"></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <canvas id="chartTwo"></canvas>
+    </div>
+
+
           </div>
         </div>
 
@@ -181,13 +219,15 @@
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="/scripts.js"></script>
+  <script src="../static/js/victor.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ="
+        crossorigin="anonymous"></script>
+    <script src="../static/js/victor.js"></script>
 </body>
 
 </html>
