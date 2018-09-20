@@ -40,6 +40,8 @@
             </li>
 
             <li><a class="nav-link" href="{{ url_for('main.plot') }}">Plot</a></li>
+                          <li><a class="nav-link" href="#searchsection">Analytics</a></li>
+
             {% if current_user.is_authenticated %} {% if current_user.is_admin %}
             <li><a class="nav-link" href="{{ url_for('main.admin_dashboard') }}">Analytics</a></li>
             <li><a class="nav-link" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
@@ -176,7 +178,7 @@
             <hr style="color:white;" >
             <h5 style="color:white;">&copy; Twing-IT</h5>
 
-               <div class="search">
+               <div class="search" id="searchsection">
         <!--<form action="" method="POST">-->
             <!--{{ form.csrf_token }}-->
             <!--<legend>Search twitter</legend>-->
