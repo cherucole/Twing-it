@@ -47,7 +47,7 @@ matplotlib==2.2.3
 mpld3==0.3
 nbformat==4.4.0
 ndg-httpsclient==0.5.1
-nltk==3.3
+nltk==3.4.5
 numpy==1.15.1
 oauthlib==2.1.0
 pandas==0.23.4
