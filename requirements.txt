@@ -31,7 +31,7 @@ geopy==1.17.0
 gmplot==1.2.0
 gunicorn==19.9.0
 howdoi==1.1.13
-httplib2==0.11.3
+httplib2==0.18.0
 idna==2.7
 ipython-genutils==0.2.0
 itsdangerous==0.24
