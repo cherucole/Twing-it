@@ -58,7 +58,7 @@ psycopg2-binary==2.7.5
 pusher==2.0.1
 pyasn1==0.4.4
 pycparser==2.18
-Pygments==2.2.0
+Pygments==2.7.4
 pyOpenSSL==18.0.0
 pyparsing==2.2.0
 pyquery==1.4.0
